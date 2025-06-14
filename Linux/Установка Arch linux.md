@@ -122,6 +122,7 @@ mount /dev/nvme0n1p1 /mnt/boot/efi
 
 6) Проверяем точки монтирования через вывод `lsblk`
 
+#### __Установка:__
 7) Устанавливаем ядро и остальную базу arch linux
 ```
 pacstrap /mnt base linux linux-firmware
@@ -136,6 +137,7 @@ genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt
 ```
 
+#### __Настройка:__
 9) Настраиваем всякое в системе
 ```
 # Временная зона
@@ -189,6 +191,7 @@ pacman -S networkmanager
 systemctl enable NetworkManager
 ```
 
+#### __Завершение:__
 10) Стваим grub
 ```
 # Устанавливаем
