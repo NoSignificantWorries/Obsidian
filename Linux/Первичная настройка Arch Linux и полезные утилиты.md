@@ -97,3 +97,15 @@ sudo ufw default deny incoming
 sudo ufw default allow outgoing
 sudo ufw allow ssh
 ```
+
+
+## __Утилиты:__
+Для распаковки zip архивов
+```
+sudo pacman -S unzip
+```
+
+Терминал
+```
+sudo pacman -S kitty
+```
