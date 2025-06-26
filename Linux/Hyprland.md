@@ -9,6 +9,7 @@ hyprland
 ```
 
 Теперь необходимы шрифты:
+Ссылка с примерами nerd шрифтов https://www.nerdfonts.com/font-downloads.
 ```
 # создаём нужные директории
 mkdir -p ~/Downloads
