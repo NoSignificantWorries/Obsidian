@@ -33,6 +33,34 @@ fc-cache -f -v
 
 Всё должно запустится, а на `Super+Q` откроется терминал.
 
+
+## __SDDM:__
+
+Установка sddm и темы для него:
+```
+sudo pacman -S sddm
+
+wget https://github.com/catppuccin/sddm/releases/download/v1.1.0/catppuccin-mocha.zip
+
+sudo unzip catppuccin-mocha.zip -d /usr/share/sddm/themes/
+```
+
+
+## __GRUB:__
+
+Установим тему для grub menu:
+```
+git clone https://github.com/catppuccin/grub.git && cd grub
+sudo cp -r src/* /usr/share/grub/themes/
+
+# добавляем строку в конфиг
+sudo -E nvim /etc/default/grub
+GRUB_THEME="/usr/share/grub/themes/catppuccin-<flavor>-grub-theme/theme.txt"
+
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+
 ## __ZSH:__
 
 Заменим bash на более хайповый zsh.
