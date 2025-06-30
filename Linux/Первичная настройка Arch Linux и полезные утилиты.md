@@ -98,14 +98,22 @@ sudo ufw default allow outgoing
 sudo ufw allow ssh
 ```
 
+## __Зеркала репозиториев:__
+```
+sudo pacman -S reflector rsync
+
+sudo reflector --latest 20 --number 10 --sort rate --save /etc/pacman.d/mirrorlist
+
+sudo pacman -Syy
+```
 
 ## __Утилиты:__
-Для распаковки zip архивов
+Для распаковки архивов
 ```
-sudo pacman -S unzip
+sudo pacman -S unzip tar
 ```
 
-Терминал
+Для истории команд:
 ```
-sudo pacman -S kitty
+curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
 ```

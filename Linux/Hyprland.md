@@ -24,8 +24,25 @@ wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsM
 unzip ~/Downloads/FiraCode.zip -d ~/.fonts/
 unzip ~/Downloads/JetBrainsMono.zip -d ~/.fonts/
 
+# ставим ещё один
+sudo pacman -S ttf-font-awesome
+
 # обновляем cache
 fc-cache -f -v
 ```
 
 Всё должно запустится, а на `Super+Q` откроется терминал.
+
+## __ZSH:__
+
+Заменим bash на более хайповый zsh.
+```
+sudo pacman -S zsh
+
+# смена оболочки
+chsh -s $(which zsh)
+
+# установка oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+```
